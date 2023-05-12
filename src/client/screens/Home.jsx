@@ -2,9 +2,9 @@ import React from 'react'
 
 function Home() {
     return (
-        <div>
+        <section>
             <h1>HOME OF CONSTELLION KIDS</h1>
-        </div>
+        </section>
     )
 }
 

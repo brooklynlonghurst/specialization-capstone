@@ -1,8 +1,70 @@
-.App {
-  text-align: center;
+* {
+  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  background-color: #0b182b;
+  color: white;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: #3d536c;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.App {
+  min-height: 100vh;
+  padding-top: 80px;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+input, textarea, select {
+  width: 300px;
+  min-height: 30px;
+  border-radius: 3px;
+  border: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Quiz */
 .question-card {
+  text-align: center;
   margin: 0 auto;
   background-color: gray;
   padding: 16px;
