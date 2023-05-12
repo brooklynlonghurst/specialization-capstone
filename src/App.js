@@ -1,7 +1,7 @@
 import './App.css';
-import Menu from './components/Menu';
-import Quiz from './screens/Quiz';
-import Home from './screens/Home';
+import Menu from './client/components/Menu';
+import Quiz from './client/screens/Quiz';
+import Home from './client/screens/Home';
 import {Routes, Route} from 'react-router-dom'
 
 function App() {
