@@ -5,7 +5,7 @@ function Post() {
     const titleRef = useRef()
     const descRef = useRef()
 
-    const handleSumbit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
         let newPost = {
             title: titleRef.current.value, 
@@ -24,7 +24,7 @@ function Post() {
     return (
         <section>
             <h1>Make a Post</h1>
-            <form onSumbit={handleSumbit}>
+            <form onSubmit={handleSubmit}>
                 <input 
                 ref={titleRef}
                 className="title-input" 

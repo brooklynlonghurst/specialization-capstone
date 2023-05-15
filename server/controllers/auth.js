@@ -17,7 +17,31 @@ module.exports = {
         }
     }, 
     login: async (req, res) => {
-        console.log("LOGIN")
-        res.status(200).send("Logged In")
+        //find username, password match in database 
+        //if no match is found, alert "no username found"
+        //if there is a match, allow user inside app
+        const {username, password} = req.body
+        let foundUser = await User.findOne({where: {username: username}})
+        const isValidPassword = () => {
+            if(password === foundUser.dataValues.password) {
+                console.log("happy path")
+                return true
+            } else {
+                console.log("sad path :(")
+            }
+        }
+        console.log(foundUser.dataValues.username)
+        console.log(username, password)
+        console.log(User)
+        if(foundUser && isValidPassword()) {
+            console.log("LOGIN")
+            res.status(200).send({
+                username: foundUser.dataValues.username, 
+                id: foundUser.dataValues.id, 
+                password: foundUser.dataValues.password
+            })
+        } else {
+            res.status(400).send("Incorrect username or password")
+        }
     }
 }

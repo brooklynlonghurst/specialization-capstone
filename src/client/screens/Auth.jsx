@@ -9,7 +9,7 @@ function Auth() {
     const passRef = useRef()
     const {state, dispatch} = useContext(GlobalContext)
 
-    const handleSumbit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
         const body = {
             username: userRef.current.value, 
@@ -28,7 +28,7 @@ function Auth() {
     return (
         <section>
             <h1>Auth</h1>
-            <form onSubmit={handleSumbit}>
+            <form onSubmit={handleSubmit}>
                 <h2>{register ? "Registering" : "Logging In"}</h2>
                 <input 
                 ref={userRef} 

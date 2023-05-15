@@ -19,6 +19,7 @@ app.post('/api/register', register)
 app.post('/api/login', login)
 app.post('/api/addPost', addPost)
 
+// db.sync({force: true})
 db.sync()
 .then(() => {
     app.listen(PORT, () => console.log(`server running on port ${PORT}`))
