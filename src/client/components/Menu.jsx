@@ -10,8 +10,8 @@ function Menu() {
         <nav>
         <h2>Constellation Kids</h2>
         <NavLink to="/"><IoHome size="30" color='white'/></NavLink>
-        <NavLink to="/scoreboard"><FaMedal size="30" color='white'/></NavLink>
         <NavLink to="/quiz"><IoGameController size="30" color='white'/></NavLink>
+        <NavLink to="/scoreboard"><FaMedal size="30" color='white'/></NavLink>
    
         </nav>
     )

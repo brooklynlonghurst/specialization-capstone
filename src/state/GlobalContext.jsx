@@ -29,5 +29,6 @@ function GlobalContextProvider(props) {
     )
 } 
 
+
 export default GlobalContext
 export {GlobalContextProvider}

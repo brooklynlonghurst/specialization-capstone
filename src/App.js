@@ -18,9 +18,9 @@ function App() {
     <div>
       <Menu />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/scoreboard' element={token ? <ScoreBoard /> : <Navigate to='/auth' />}/>
+        <Route path='/' element={token ? <Home /> : <Navigate to='/auth' />} />
         <Route path='/quiz' element={ token ? <Quiz /> : <Navigate to='/auth' />}/>
+        <Route path='/scoreboard' element={token ? <ScoreBoard /> : <Navigate to='/auth' />}/>
         <Route path='/auth' element={!token ? <Auth /> : <Navigate to="/" />}/>
       </Routes>
     </div>
