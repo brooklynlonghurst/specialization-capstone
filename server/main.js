@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const {login, register} = require('./controllers/auth')
+const {addPost} = require('./controllers/postController')
 const db = require('./util/database')
 const {User, Post} = require('./util/models')
 
@@ -16,6 +17,10 @@ Post.belongsTo(User)
 
 app.post('/api/register', register)
 app.post('/api/login', login)
+app.post('/api/addPost', addPost)
 
 db.sync()
-app.listen(PORT, () => console.log(`server running on port ${PORT}`))
+.then(() => {
+    app.listen(PORT, () => console.log(`server running on port ${PORT}`))
+})
+.catch(err => console.log(err))

@@ -3,14 +3,17 @@ import { createContext, useReducer } from "react";
 const initalState = {
     userId: null,
     username: "", 
-    token: null
+    token: null,
 }
 
 const GlobalContext = createContext() 
 
 function GlobalContextProvider(props) {
     function reducer(state, action) {
-        switch(action.type){
+        switch(action.type) {
+            case "LOGIN":
+                let {username, id} = action.payload
+                return {...state, userId: id, username: username, token: true}
             default: 
                 return state
         }
