@@ -17,7 +17,7 @@ Post.belongsTo(User)
 
 app.post('/api/register', register)
 app.post('/api/login', login)
-app.post('/api/addPost', addPost)
+app.post('/api/addPost/:userId', addPost)
 
 // db.sync({force: true})
 db.sync()
