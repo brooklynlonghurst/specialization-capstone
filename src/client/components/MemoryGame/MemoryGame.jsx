@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import SingleCard from "./SingleCard";
 
 const cardImages = [
     {"src": "/img/leo_major.webp"}, 
@@ -12,6 +13,8 @@ const cardImages = [
 function MemoryGame() {
     const [cards, setCards] = useState([])
     const [turns, setTurns] = useState(0)
+    const [choiceOne, setChoiceOne] = useState(null)
+    const [choiceTwo, setChoiceTwo] = useState(null)
 
     const shuffleCards = () => {
         const shuffledCards = [...cardImages, ...cardImages]
@@ -21,7 +24,10 @@ function MemoryGame() {
         setCards(shuffledCards)
         setTurns(0)
     }
-    console.log(cards, turns)
+
+    const handleChoice = (card) => {
+        choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
+    }
 
     return (
         <section>
@@ -29,12 +35,11 @@ function MemoryGame() {
             <button onClick={shuffleCards}>New Game</button>
             <div className="card-grid">
                 {cards.map(card => (
-                    <div key={card.id} className="card">
-                        <div>
-                            <img className="front" src={card.src} alt="card front" />
-                            <img src="/img/cover.jpeg" alt=""
-                        </div>
-                    </div>
+                    <SingleCard 
+                        key={card.id} 
+                        card={card}
+                        handleChoice={handleChoice}
+                    />
                 ))}
             </div>
 

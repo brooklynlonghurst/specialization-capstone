@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Post from "../components/Post";
 import Quiz from '../components/Quiz';
-import MemoryGame from '../components/MemoryGame';
+import MemoryGame from '../components/MemoryGame/MemoryGame';
 
 function Games() {
     return (
