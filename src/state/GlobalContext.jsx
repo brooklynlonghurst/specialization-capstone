@@ -13,7 +13,7 @@ function GlobalContextProvider(props) {
         switch(action.type) {
             case "LOGIN":
                 let {username, id} = action.payload
-                console.log(state, username)
+                // console.log(state, username)
                 return {...state, userId: id, username: username, token: true}
             default: 
                 return state

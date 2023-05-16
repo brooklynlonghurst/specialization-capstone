@@ -6,6 +6,11 @@ function Post() {
     const {state} = useContext(GlobalContext)
     const titleRef = useRef()
     const descRef = useRef()
+    const formRef = useRef();
+
+    const handleClick = () => {
+        formRef.current.value = "";
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -36,7 +41,7 @@ function Post() {
                 ref={descRef}
                 className="description-input" 
                 placeholder="What did you learn?"/>
-                <button>Post It</button>
+                <button ref={formRef} onClick={handleClick}>Post It</button>
             </form>
         </section>
     )

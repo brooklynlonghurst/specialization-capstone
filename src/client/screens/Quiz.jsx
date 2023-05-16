@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Post from "../components/Post";
 
 function Quiz() {
     const [showFinalResults, setFinalResults] = useState(false)
@@ -96,8 +97,9 @@ return (
                 </ul>
             </div>
         )}
-    </section>
 
+    <Post />
+    </section>
     )
 }
 

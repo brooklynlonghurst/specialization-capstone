@@ -1,5 +1,5 @@
 import React, {useContext, useState, useCallback, useEffect} from "react";
-import Post from "../components/Post";
+
 import GlobalContent from "../../state/GlobalContext";
 import axios from "axios";
 
@@ -37,7 +37,7 @@ function ScoreBoard() {
                 {
                     state.userId === post.userId && 
                     <div>
-                         <button className='form-btn' style={{marginLeft: 10}} onClick={() => deletePost(post.id)}>
+                         <button className='form-btn'  onClick={() => deletePost(post.id)}>
                             delete post
                         </button>
                     </div>
@@ -49,7 +49,7 @@ function ScoreBoard() {
     return (
         <section>
             <h2>This is the Score Board</h2>
-            <Post />
+            
             <main>
                 {mappedPosts}
             </main>
