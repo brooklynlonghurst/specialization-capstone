@@ -17,6 +17,16 @@ function ScoreBoard() {
         getUserPosts()
     }, [getUserPosts])
 
+    const deletePost = id => {
+        axios.delete(`/posts/${id}`)
+            .then(() => {
+                getUserPosts()
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
     const mappedPosts = posts.map(post => {
         console.log(state.userId)
         return (
@@ -24,6 +34,14 @@ function ScoreBoard() {
                 <h2>{post.title}</h2>
                 <h4>{post.username}</h4>
                 <p>{post.description}</p>
+                {
+                    state.userId === post.userId && 
+                    <div>
+                         <button className='form-btn' style={{marginLeft: 10}} onClick={() => deletePost(post.id)}>
+                            delete post
+                        </button>
+                    </div>
+                }
             </div>
         )
     })
