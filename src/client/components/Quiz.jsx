@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Post from "../components/Post";
 
 function Quiz() {
     const [showFinalResults, setFinalResults] = useState(false)
@@ -73,10 +72,10 @@ function Quiz() {
         setFinalResults(false)
     }
 
-return (
-    <section>
-        <h1>Quiz</h1>
-        <h2>Current Score: {score}</h2>
+    return (
+        <section>
+            <h1>Quiz</h1>
+            <h2>Current Score: {score}</h2>
         {showFinalResults ? (
             <div className='final-results'>
             <h1>Final Results</h1>
@@ -98,8 +97,7 @@ return (
             </div>
         )}
 
-    <Post />
-    </section>
+        </section>
     )
 }
 
