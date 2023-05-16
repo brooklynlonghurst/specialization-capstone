@@ -5,12 +5,11 @@ import Home from './client/screens/Home';
 import ScoreBoard from './client/screens/ScoreBoard';
 import Auth from './client/screens/Auth';
 import {Routes, Route} from 'react-router-dom'
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import GlobalContext from './state/GlobalContext';
 import { Navigate } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(GlobalContext)
 
   const {state: {userId, token}} = useContext(GlobalContext)
 
