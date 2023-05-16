@@ -1,27 +1,24 @@
 import React, {useContext, useState, useCallback, useEffect} from "react";
 import Post from "../components/Post";
-import initialState from "../../state/GlobalContext";
+import GlobalContent from "../../state/GlobalContext";
 import axios from "axios";
 
-
-
 function ScoreBoard() {
-    const {userId} = useContext(initialState)
-    console.log(userId)
+    const {state} = useContext(GlobalContent)
     const [posts, setPosts] = useState([])
 
     const getUserPosts = useCallback(()=> {
-        axios.post(`/api/addPost/${userId}`)
+        axios.get(`/api/getPosts/${state.userId}`)
              .then(res => setPosts(res.data))
              .catch(err => console.log(err))
-    }, [userId])
+    }, [state.userId])
 
     useEffect(() => {
         getUserPosts()
     }, [getUserPosts])
 
     const mappedPosts = posts.map(post => {
-        console.log(userId)
+        console.log(state.userId)
         return (
             <div key={post.id} className='post-card'>
                 <h2>{post.title}</h2>

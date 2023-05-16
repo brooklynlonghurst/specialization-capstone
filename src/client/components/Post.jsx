@@ -1,7 +1,9 @@
-import React, {useRef} from "react"
+import React, {useRef, useContext} from "react"
 import axios from 'axios'
+import GlobalContext from "../../state/GlobalContext"
 
 function Post() {
+    const {state} = useContext(GlobalContext)
     const titleRef = useRef()
     const descRef = useRef()
 
@@ -9,7 +11,8 @@ function Post() {
         e.preventDefault()
         let newPost = {
             title: titleRef.current.value, 
-            description: descRef.current.value
+            description: descRef.current.value, 
+            userId: state.userId 
         }
         console.log("POST", newPost)
         axios 

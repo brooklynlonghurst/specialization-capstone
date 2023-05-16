@@ -10,5 +10,15 @@ module.exports = {
         catch (error) {
             console.log(error)
         }
+    }, 
+    getPosts: async (req, res) => {
+        try {
+            const {id} = req.params
+            let posts = await Post.findAll({where: {userId: id}})
+            res.status(200).send(posts)
+        }
+        catch (error){
+            console.log(error)
+        }
     }
 }
