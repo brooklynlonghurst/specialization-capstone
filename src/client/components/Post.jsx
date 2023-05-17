@@ -29,7 +29,7 @@ function Post() {
     
     return (
         <section>
-            <h1>Make a Post</h1>
+            <h2>Make a Post</h2>
             <form onSubmit={handleSubmit}>
                 <input 
                 ref={titleRef}

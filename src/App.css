@@ -53,8 +53,20 @@ section {
   padding-top: 20px;
 }
 
+.intro-p {
+  font-family: 'JetBrains Mono', monospace;
+  inline-size: 60rem;
+  overflow-wrap: break-word;
+  font-size: medium;
+}
 
+h1 {
+  font-size: 50px;
+}
 
+.post-title, p {
+  font-family: 'JetBrains Mono', monospace;
+}
 
 
 /* Memory Game */

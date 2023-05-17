@@ -10,7 +10,7 @@ function Quiz() {
         text: "What are constellations?",
         options: [
             { id: 0, text: "A group of moons", isCorrect: false },
-            { id: 1, text: "Floating ballons", isCorrect: false },
+            { id: 1, text: "Floating balloons", isCorrect: false },
             { id: 2, text: "A group of stars", isCorrect: true },
             { id: 3, text: "Planets", isCorrect: false },
         ]
@@ -27,7 +27,7 @@ function Quiz() {
         {
         text: "Why are some stars different colors?",
         options: [
-            { id: 0, text: "Inclusion", isCorrect: false },
+            { id: 0, text: "It is what type of star it is", isCorrect: false },
             { id: 1, text: "It determines how much heat the star is giving off", isCorrect: true },
             { id: 2, text: "The distance it is from Earth", isCorrect: false },
             { id: 3, text: "It's what color of shirt they are wearing that day", isCorrect: false },
@@ -74,8 +74,8 @@ function Quiz() {
 
     return (
         <section>
-            <h1>Quiz</h1>
-            <h2>Current Score: {score}</h2>
+            <h2>Quiz</h2>
+            <h3>Current Score: {score}</h3>
         {showFinalResults ? (
             <div className='final-results'>
             <h1>Final Results</h1>

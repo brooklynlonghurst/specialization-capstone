@@ -31,7 +31,7 @@ function ScoreBoard() {
         console.log(state.userId)
         return (
             <div key={post.id} className='post-card'>
-                <h2>{post.title}</h2>
+                <h2 className="post-title">{post.title}</h2>
                 <h4>{post.username}</h4>
                 <p>{post.description}</p>
                 {
@@ -48,7 +48,7 @@ function ScoreBoard() {
 
     return (
         <section>
-            <h2>This is the Score Board</h2>
+            <h1>Score Board</h1>
             
             <main>
                 {mappedPosts}

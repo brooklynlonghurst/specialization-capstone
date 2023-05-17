@@ -21,7 +21,7 @@ function MemoryGame() {
         const shuffledCards = [...cardImages, ...cardImages]
             .sort(() => Math.random() - 0.5)
             .map((card) => ({ ...card, id: Math.random()}))
-            
+
         setChoiceOne(null)
         setChoiceTwo(null)
         setCards(shuffledCards)
@@ -66,7 +66,8 @@ function MemoryGame() {
 
     return (
         <section>
-            <h1>Memory Game</h1>
+            <h2>Memory Game</h2>
+            <h3>Turns: {turns}</h3>
             <button onClick={shuffleCards}>New Game</button>
             <div className="card-grid">
                 {cards.map(card => (
@@ -79,7 +80,6 @@ function MemoryGame() {
                     />
                 ))}
             </div>
-            <p>Turns: {turns}</p>
         </section>
     )
 }
