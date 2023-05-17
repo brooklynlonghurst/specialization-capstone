@@ -27,9 +27,8 @@ function Auth() {
     }
     return (
         <section>
-            <h1>Auth</h1>
             <form onSubmit={handleSubmit}>
-                <h2>{register ? "Registering" : "Logging In"}</h2>
+                <h1>{register ? "Register" : "Log In"}</h1>
                 <input 
                 ref={userRef} 
                 type="text" 
@@ -42,6 +41,7 @@ function Auth() {
                 </input>
                 <button>{register ? "Register" : "Login"}</button>
             </form>
+            <br />
             <button onClick={toggle}>Click here to {!register ? "Register" : "Login"}</button>
         </section>
     )

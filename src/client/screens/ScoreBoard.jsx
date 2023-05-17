@@ -1,5 +1,4 @@
 import React, {useContext, useState, useCallback, useEffect} from "react";
-
 import GlobalContent from "../../state/GlobalContext";
 import axios from "axios";
 
@@ -31,6 +30,7 @@ function ScoreBoard() {
         console.log(state.userId)
         return (
             <div key={post.id} className='post-card'>
+                <br />
                 <h2 className="post-title">{post.title}</h2>
                 <h4>{post.username}</h4>
                 <p>{post.description}</p>

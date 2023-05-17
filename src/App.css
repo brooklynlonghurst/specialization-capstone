@@ -61,7 +61,7 @@ section {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .post-title, p {
@@ -195,7 +195,7 @@ a {
 .dropdown-menu{
   position: absolute;
   top: 40px;
-  right: 28px;
+  right: 20px;
   /* background-color: #fff; */
   
   padding: 10px 20px;
