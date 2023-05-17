@@ -27,7 +27,7 @@ function Quiz() {
         {
         text: "Why are some stars different colors?",
         options: [
-            { id: 0, text: "It is what type of star it is", isCorrect: false },
+            { id: 0, text: "It depends on what type of star it is", isCorrect: false },
             { id: 1, text: "It determines how much heat the star is giving off", isCorrect: true },
             { id: 2, text: "The distance it is from Earth", isCorrect: false },
             { id: 3, text: "It's what color of shirt they are wearing that day", isCorrect: false },

@@ -29,6 +29,7 @@ function Auth() {
         <section>
             <form onSubmit={handleSubmit}>
                 <h1>{register ? "Register" : "Log In"}</h1>
+                <br />
                 <input 
                 ref={userRef} 
                 type="text" 
@@ -39,9 +40,8 @@ function Auth() {
                 type="password" 
                 placeholder="Password">
                 </input>
-                <button>{register ? "Register" : "Login"}</button>
+                <button className="auth-button">{register ? "Register" : "Login"}</button>
             </form>
-            <br />
             <button onClick={toggle}>Click here to {!register ? "Register" : "Login"}</button>
         </section>
     )
