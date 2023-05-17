@@ -1,6 +1,7 @@
 import React, {useContext, useState, useCallback, useEffect} from "react";
 import GlobalContent from "../../state/GlobalContext";
 import axios from "axios";
+import { getCurrentDate } from "../components/Date";
 
 function ScoreBoard() {
     const {state} = useContext(GlobalContent)
@@ -26,11 +27,14 @@ function ScoreBoard() {
             })
     }
 
+  
+
     const mappedPosts = posts.map(post => {
         console.log(state.userId)
         return (
             <div key={post.id} className='post-card'>
                 <br />
+                <h4>{getCurrentDate()}</h4>
                 <h2 className="post-title">{post.title}</h2>
                 <h4>{post.username}</h4>
                 <p>{post.description}</p>

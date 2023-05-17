@@ -64,7 +64,7 @@ h1 {
   font-size: 45px;
 }
 
-.post-title, p {
+.post-title, p, h4{
   font-family: 'JetBrains Mono', monospace;
 }
 
