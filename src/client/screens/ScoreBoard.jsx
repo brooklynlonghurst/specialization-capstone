@@ -33,16 +33,14 @@ function ScoreBoard() {
         console.log(state.userId)
         return (
             <div key={post.id} className='post-card'>
-                <br />
-                <h4>{getCurrentDate()}</h4>
                 <h2 className="post-title">{post.title}</h2>
-                <h4>{post.username}</h4>
+                <h6>{getCurrentDate()}</h6>
                 <p>{post.description}</p>
                 {
                     state.userId === post.userId && 
-                    <div>
+                    <div className="post-button">
                          <button className='form-btn'  onClick={() => deletePost(post.id)}>
-                            delete post
+                            Delete
                         </button>
                     </div>
                 }
@@ -53,7 +51,7 @@ function ScoreBoard() {
     return (
         <section>
             <h1>Score Board</h1>
-            
+            <br />
             <main>
                 {mappedPosts}
             </main>

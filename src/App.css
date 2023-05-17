@@ -64,10 +64,27 @@ h1 {
   font-size: 45px;
 }
 
-.post-title, p, h4{
+
+/* Posts */
+.post-title, p, h6{
   font-family: 'JetBrains Mono', monospace;
+  overflow-wrap: break-word;
+  margin-bottom: 5px;
 }
 
+.post-card {
+  width: 500px;
+  border: 1px solid white;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 25px;
+}
+
+.post-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
 
 /* Memory Game */
 .back {
