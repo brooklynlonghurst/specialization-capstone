@@ -2,8 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import {IoHome, IoGameController} from "react-icons/io5";
 import {FaMedal} from 'react-icons/fa'
-import Dropdown from './Dropdown/Dropdown';
-
+import DropDownProfile from './DropDownProfile';
+import { TbLogout } from "react-icons/tb";
+import { BsPersonCircle } from "react-icons/bs";
 
 function Menu() {
     
@@ -13,7 +14,7 @@ function Menu() {
         <NavLink to="/"><IoHome size="30" color='white'/></NavLink>
         <NavLink to="/games"><IoGameController size="30" color='white'/></NavLink>
         <NavLink to="/scoreboard"><FaMedal size="30" color='white'/></NavLink>
-        <Dropdown />
+        <DropDownProfile title={<BsPersonCircle size="30" color='white' />} info={<a href='/auth'> <TbLogout />Logout</a>} />
         </nav>
     )
 
