@@ -1,29 +1,29 @@
-import { createContext, useReducer } from "react";
+// import { createContext, useReducer } from "react";
 
-const initialState = {
-    userId: 0,
-    username: "", 
-    token: null
-}
+// const initialState = {
+//     userId: 0,
+//     username: "", 
+//     token: null
+// }
 
-const GlobalContext = createContext() 
+// const GlobalContext = createContext() 
 
-function GlobalContextProvider(props) {
-    function reducer(state, action) {
-        switch(action.type){
-            default: 
-                return state
-        }
-    }
+// function GlobalContextProvider(props) {
+//     function reducer(state, action) {
+//         switch(action.type){
+//             default: 
+//                 return state
+//         }
+//     }
 
-    const [state, dispatch] = useReducer(reducer, initialState)
+//     const [state, dispatch] = useReducer(reducer, initialState)
 
-    return (
-        <GlobalContext.Provider value={{state, dispatch}}>
-            {props.children}
-        </GlobalContext.Provider>
-    )
-} 
+//     return (
+//         <GlobalContext.Provider value={{state, dispatch}}>
+//             {props.children}
+//         </GlobalContext.Provider>
+//     )
+// } 
 
-export default GlobalContext
-export {GlobalContextProvider}
+// export default GlobalContext
+// export {GlobalContextProvider}
