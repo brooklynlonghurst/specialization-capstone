@@ -76,6 +76,7 @@ function Quiz() {
         <section>
             <h2>Quiz</h2>
             <h3>Current Score: {score}</h3>
+            <br />
         {showFinalResults ? (
             <div className='final-results'>
             <h1>Final Results</h1>
