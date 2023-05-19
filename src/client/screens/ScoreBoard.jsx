@@ -1,9 +1,9 @@
 import React, {useContext, useState, useCallback, useEffect} from "react";
 import GlobalContent from "../../state/GlobalContext";
 import axios from "axios";
-import { getCurrentDate } from "../components/Date";
 
 function ScoreBoard() {
+
     const {state} = useContext(GlobalContent)
     const [posts, setPosts] = useState([])
 
@@ -27,14 +27,19 @@ function ScoreBoard() {
             })
     }
 
+    
   
 
     const mappedPosts = posts.map(post => {
+        const date = new Date(post.createdAt);
+
+        const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+
         console.log(state.userId)
         return (
             <div key={post.id} className='post-card'>
                 <h2 className="post-title">{post.title}</h2>
-                <h6>{getCurrentDate()}</h6>
+                <h6>{formattedDate}</h6>
                 <p>{post.description}</p>
                 {
                     state.userId === post.userId && 
