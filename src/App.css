@@ -65,10 +65,19 @@ h1 {
 }
 
 /* Auth */
-.game-card-container {
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.home-page-card {
   display: flex;
   flex-direction: row;
-  
+  gap: 15px;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .game-card {
