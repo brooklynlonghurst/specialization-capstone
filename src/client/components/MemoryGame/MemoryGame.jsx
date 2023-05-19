@@ -19,14 +19,24 @@ function MemoryGame() {
     const [showFinalResults, setFinalResults] = useState(false)
 
 
-    const shuffleCards = async () => {
-        const shuffledCards = await [...cardImages, ...cardImages]
-            .sort(() => Math.random() - 0.5)
-            .map((card) => ({ ...card, id: Math.random()}))
-
+    const shuffleCards = () => {
+        console.log("First")
+        const shuffledCards = [...cardImages, ...cardImages]
+            .sort(() => {
+                console.log("second")
+                return Math.random() - 0.5
+            })
+            .map((card) => {
+                console.log("third")
+                return { ...card, id: Math.random()}
+            })
+            console.log("Fourrrr")
         setChoiceOne(null)
+        console.log("Fiff")
         setChoiceTwo(null)
+        console.log("six")
         setCards(shuffledCards)
+        console.log("seven")
         setTurns(0)
     }
 
@@ -36,6 +46,7 @@ function MemoryGame() {
     }
 
     useEffect(() => {
+        
         if(choiceOne && choiceTwo) {
             setDisabled(true)
             if(choiceOne.src === choiceTwo.src) {
@@ -57,12 +68,12 @@ function MemoryGame() {
                     console.log(matches, newCards.length)
                 if(matches === newCards.length) {
                     console.log("finished")
-                    return setTimeout(() => setFinalResults(true), 1000)
+                     setTimeout(() => setFinalResults(true), 1000)
                 } else {
-                    resetTurn()
+                     resetTurn()
                 }
             } else {
-                setTimeout(() => resetTurn(), 1000)
+                 setTimeout(() => resetTurn(), 1000)
             }
         }
     }, [choiceOne, choiceTwo])
@@ -78,11 +89,25 @@ function MemoryGame() {
         shuffleCards()
     }, [])
 
-    const newGame = async () => {
-        setFinalResults(false)
-        await shuffleCards()
+    const newGame = () => {
+        try {
+            const shuffledCards =  [...cardImages, ...cardImages]
+            .sort(() => Math.random() - 0.5)
+            .map((card) => ({ ...card, id: Math.random()}))
+
+        setChoiceOne(null)
+        setChoiceTwo(null)
+        setCards(shuffledCards)
+        setTurns(0)
+            setFinalResults(false)
+            // shuffleCards()
+        }
+        catch (error) {
+            console.log(error)
+        }
         // resetTurn()
     }
+
     return (
         <section>
             <h2>Memory Game</h2>
