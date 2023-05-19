@@ -29,10 +29,11 @@ function MemoryGame() {
         setCards(shuffledCards)
         setTurns(0)
     }
-        console.log(showFinalResults)
-        const handleChoice = (card) => {
-            choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
-        }
+
+    console.log(showFinalResults)
+    const handleChoice = (card) => {
+        choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
+    }
 
     useEffect(() => {
         if(choiceOne && choiceTwo) {
@@ -62,7 +63,6 @@ function MemoryGame() {
                 }
             } else {
                 setTimeout(() => resetTurn(), 1000)
-                
             }
         }
     }, [choiceOne, choiceTwo])
@@ -80,7 +80,7 @@ function MemoryGame() {
 
     const newGame = async () => {
         setFinalResults(false)
-        // await shuffleCards()
+        await shuffleCards()
         // resetTurn()
     }
     return (
