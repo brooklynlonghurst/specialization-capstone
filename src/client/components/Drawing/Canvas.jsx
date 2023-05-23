@@ -37,7 +37,6 @@ function Canvas() {
         ctx.fill();
     }
       
-
     function clearCanvas() {
         console.log('Clearing canvas...');
         const canvas = canvasRef.current;
@@ -47,9 +46,6 @@ function Canvas() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath();
     }
-      
-      
-      
 
     return (
         <section>
