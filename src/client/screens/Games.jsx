@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Post from "../components/Post";
 import Quiz from '../components/Quiz';
 import MemoryGame from '../components/MemoryGame/MemoryGame';
+import Canvas from '../components/Drawing/Canvas';
 
 function Games() {
     return (
@@ -9,6 +10,7 @@ function Games() {
             <h1>Games</h1>
             <MemoryGame />
             <Quiz />
+            <Canvas />
             <Post />
         </section>
     )
