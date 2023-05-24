@@ -65,6 +65,12 @@ h1 {
 }
 
 /* Auth */
+/* .home-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-right: 100px;
+} */
 .intro-container {
   display: flex;
   flex-direction: column;
@@ -74,6 +80,7 @@ h1 {
 
 .home-page-card {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 15px;
   justify-content: center;
@@ -128,7 +135,6 @@ h1 {
 }
 
 .card-grid {
-  margin-top: 40px;
   display: grid;
   grid-template-columns: 0.52fr 0.52fr 0.52fr 0.52fr;
   grid-gap: 10px;

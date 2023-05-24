@@ -112,6 +112,7 @@ function MemoryGame() {
         <section>
             <h2>Memory Game</h2>
             <h3>Turns: {turns}</h3>
+            <br />
             {showFinalResults ? (
                 <div className='final-results'>
                 <h1>Final Results</h1>
