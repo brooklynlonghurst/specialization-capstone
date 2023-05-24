@@ -8,6 +8,7 @@ import {Routes, Route} from 'react-router-dom'
 import { useContext } from 'react';
 import GlobalContext from './state/GlobalContext';
 import { Navigate } from 'react-router-dom';
+import Footer from './client/components/Footer';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/scoreboard' element={token ? <ScoreBoard /> : <Navigate to='/auth' />}/>
         <Route path='/auth' element={!token ? <Auth /> : <Navigate to="/" />}/>
       </Routes>
+      <Footer />
     </div>
   );
 }

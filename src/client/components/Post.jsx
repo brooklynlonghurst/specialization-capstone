@@ -41,6 +41,7 @@ function Post() {
                 placeholder="What did you learn?"/>
                 <button>Post It</button>
             </form>
+            <br />
         </section>
     )
 }
