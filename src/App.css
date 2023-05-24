@@ -13,8 +13,6 @@ body {
   padding-bottom: 2.5rem; 
 }
 
-
-
 nav {
   display: flex;
   flex-direction: row;
@@ -68,12 +66,6 @@ h1 {
 }
 
 /* Auth */
-/* .home-container {
-  display: flex;
-  flex-direction: column;
-  margin-left: 100px;
-  margin-right: 100px;
-} */
 .intro-container {
   display: flex;
   flex-direction: column;
@@ -104,11 +96,6 @@ h1 {
   height: 20rem;
 }
 
-
-.thatpic {
-  width: 35rem;
-  height: 30rem;
-}
 
 /* Posts */
 .post-title, p, h6{
@@ -168,9 +155,6 @@ h1 {
   transform: rotateY(0deg);
   transition-delay: 0.2s;
 }
-
-
-
 
 
 /* Quiz */
@@ -238,7 +222,6 @@ button {
 
 
 /* Dropdown */
-
 ul{
   list-style: none;
 }
@@ -249,62 +232,6 @@ a {
   display: flex;
   align-items: center;
 }
-
-.menu-trigger img{
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  overflow: hidden;
-  cursor: pointer;
-  background-color: #fff;
-}
-
-.dropdown-menu{
-  position: absolute;
-  top: 40px;
-  right: 20px;
-  align-content: center;
-  border-radius: var(--border-radius);
-  padding: 10px 20px;
-  width: 200px;
-}
-
-
-.dropdown-menu.active{
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition: var(--speed) ease;
-}
-
-.dropdown-menu.inactive{
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: var(--speed) ease;
-}
-
-.dropdown-menu ul li:hover a{
-  color: white;
-  cursor: pointer;
-}
-
-.dropdownItem{
-  display: flex;
-  margin: 10px auto;
-  background-color: #3d536c;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-.dropdownItem a{
-  max-width: 100px;
-  margin-left: 10px;
-  transition: var(--speed);
-}
-
 
 .dropdown-title {
   cursor: pointer;
@@ -328,7 +255,7 @@ a {
   content: '';
   position: absolute;
   top: -0.7rem;
-  left: 3.65rem;
+  left: 3.68rem;
   width: 18.2px;
   height: 18.2px;
   transform: rotate(45deg);
@@ -348,6 +275,7 @@ a {
   border: 2px solid white;
 }
 
+
 /* Footer */
 footer {
   position: absolute;
@@ -361,4 +289,36 @@ footer {
   width: 100%;
   height: 2.5rem;
   background-color: #3d536c;
+}
+
+
+/* Tic Tac Toe */
+span {
+  font-size: 22px;
+  color: white;
+}
+
+img {
+  height: 80%;
+}
+
+.square {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 0.5em;
+  gap: 1em;
+  grid-template-rows: 70px 70px 70px;
 }

@@ -16,7 +16,8 @@ function Home() {
                 {/* <img src='https://s3.us-east-1.amazonaws.com/s3.discoveryplace.org/craft3/_mediumWidth/Constellations-shutterstock_267383846.jpg' alt='constellation img'/>   */}
                 <GameCard title={'Memory Game'} img={<img className='game-card-img' src='./img/memory.png' alt='memory game img'/>}/>
                 <GameCard title={'Quiz'} img={<img className='game-card-img' src='./img/quiz.png' alt='quiz img'/>} />  
-                <GameCard title={'Create Your Constellation'} img={<img className='game-card-img' src='./img/drawing.png' alt='constellation img'/>} />        
+                <GameCard title={'Create Your Constellation'} img={<img className='game-card-img' src='./img/drawing.png' alt='constellation img'/>} /> 
+                <GameCard title={'Tic Tac Toe'} img={<img className='game-card-img' src='./img/tictactoe.png' alt='tic tac toe img'/>} />         
             </div>
             <br />
         </div>

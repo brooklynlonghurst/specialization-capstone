@@ -42,7 +42,6 @@ function Post(props) {
                 placeholder="What did you learn?"/>
                 <button>Post It</button>
             </form>
-            <br />
         </section>
     )
 }

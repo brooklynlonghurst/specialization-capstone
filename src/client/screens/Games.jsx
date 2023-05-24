@@ -1,8 +1,8 @@
 import React from 'react'
-import Post from "../components/Post";
 import Quiz from '../components/Quiz';
 import MemoryGame from '../components/MemoryGame/MemoryGame';
 import Canvas from '../components/Drawing/Canvas';
+import TicTacToe from '../components/TicTacToe/TicTacToe';
 
 function Games() {
     return (
@@ -11,6 +11,7 @@ function Games() {
             <MemoryGame />
             <Quiz />
             <Canvas />
+            <TicTacToe />
         </section>
     )
 }

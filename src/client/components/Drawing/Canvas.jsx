@@ -1,7 +1,6 @@
 import {useOnDraw} from './Hooks'
 import { useEffect } from 'react'
 
-
 function Canvas() {
 
     const {
@@ -15,7 +14,7 @@ function Canvas() {
         const container = canvas.parentNode;
         canvas.width = container.clientWidth;
         canvas.height = container.clientHeight;
-      }, []);
+    })
 
     function onDraw(ctx, point, prevPoint) {
       drawLine(prevPoint, point, ctx, '#b5a771', 1)
@@ -58,6 +57,7 @@ function Canvas() {
                     ref={setCanvasRef}
                 />
             </div>
+            <br />
         </section>
     )
 }
