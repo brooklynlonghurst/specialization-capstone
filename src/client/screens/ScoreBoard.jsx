@@ -60,6 +60,7 @@ function ScoreBoard() {
             <main>
                 {mappedPosts}
             </main>
+            <br/>
         </section>
     )
 }
