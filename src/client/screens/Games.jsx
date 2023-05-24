@@ -11,7 +11,6 @@ function Games() {
             <MemoryGame />
             <Quiz />
             <Canvas />
-            <Post />
         </section>
     )
 }

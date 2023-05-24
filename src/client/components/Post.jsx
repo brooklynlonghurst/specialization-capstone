@@ -2,7 +2,7 @@ import React, {useRef, useContext} from "react"
 import axios from 'axios'
 import GlobalContext from "../../state/GlobalContext"
 
-function Post() {
+function Post(props) {
     const {state} = useContext(GlobalContext)
     const titleRef = useRef()
     const descRef = useRef()
@@ -19,6 +19,7 @@ function Post() {
             .post('/api/addPost', newPost)
             .then((res) => {
                 console.log(res.data)
+                props.getUserPosts()
             })
             .catch((err) => {
                 console.error(err)

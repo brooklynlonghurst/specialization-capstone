@@ -1,6 +1,7 @@
 import React, {useContext, useState, useCallback, useEffect} from "react";
 import GlobalContent from "../../state/GlobalContext";
 import axios from "axios";
+import Post from "../components/Post";
 
 function ScoreBoard() {
 
@@ -26,9 +27,6 @@ function ScoreBoard() {
                 console.log(err)
             })
     }
-
-    
-  
 
     const mappedPosts = posts.map(post => {
         const date = new Date(post.createdAt);
@@ -57,6 +55,7 @@ function ScoreBoard() {
         <section>
             <h1>Score Board</h1>
             <br />
+            <Post getUserPosts={getUserPosts}/>
             <main>
                 {mappedPosts}
             </main>
