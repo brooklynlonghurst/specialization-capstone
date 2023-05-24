@@ -102,6 +102,11 @@ h1 {
 }
 
 
+.thatpic {
+  width: 35rem;
+  height: 30rem;
+}
+
 /* Posts */
 .post-title, p, h6{
   font-family: 'JetBrains Mono', monospace;
