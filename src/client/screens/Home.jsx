@@ -8,7 +8,7 @@ function Home() {
     return (
         <div className='home-container'>
             <div className='intro-container'>
-                <h1>Welcome, {state.username}</h1>
+                <h1>Welcome, {state.username}!</h1>
                 <br />
                 <p className='intro-p'><IoPlanet size='15px'/>Constellation Kids is a place for you to learn all about the stars! Play games and write posts of what you've learned about constellations. Check your progress on your scoreboard. Go explore the world that is right above you!</p>
             </div>
