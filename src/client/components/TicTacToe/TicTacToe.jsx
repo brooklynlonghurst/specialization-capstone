@@ -31,11 +31,11 @@ function TicTacToe(props) {
                 return `${squares[a]} won!`
             }
         }
-        return "Who will win?"
     }
 
   return (
     <section>
+        <h2>Tic Tac Toe</h2>
       <span>{calculateWinner(squares)}</span>
       <div className='container'>
         {squares.map((val, index) => {
