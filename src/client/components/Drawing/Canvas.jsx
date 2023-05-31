@@ -17,7 +17,7 @@ function Canvas() {
     })
 
     function onDraw(ctx, point, prevPoint) {
-      drawLine(prevPoint, point, ctx, '#b5a771', 1)
+      drawLine(prevPoint, point, ctx, '#b5a771', 1);
     }
 
     function drawLine(start, end, ctx, color, width) {
