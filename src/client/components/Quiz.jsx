@@ -81,7 +81,7 @@ function Quiz() {
             <div className='final-results'>
             <h1>Final Results</h1>
             <h2>{score} out of {questions.length} correct - {(score/questions.length) * 100}%</h2>
-                <button onClick={() => restartGame()}>Reset Game</button>
+                <button onClick={() => restartGame()}>New Game</button>
             </div>
         ) : (
             <div className='question-card'>

@@ -51,7 +51,7 @@ function TicTacToe(props) {
             );
           })}
       </div>
-      <button onClick={handleClick}>Reset</button>
+      <button onClick={handleClick}>New Game</button>
       <br  />
     </section>
   )
