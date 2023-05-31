@@ -137,6 +137,7 @@ h1 {
 
 .card {
   position: relative;
+  cursor: pointer;
 }
 
 .card img {
@@ -149,6 +150,7 @@ h1 {
   transform: rotateY(90deg);
   transition: all ease-in 0.2s;
   position: absolute;
+  
 }
 
 .flipped .front {
@@ -273,6 +275,7 @@ a {
   width: 700px;
   height: 500px;
   border: 2px solid white;
+  cursor: pointer;
 }
 
 

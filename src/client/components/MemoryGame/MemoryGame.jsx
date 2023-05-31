@@ -20,23 +20,17 @@ function MemoryGame() {
 
 
     const shuffleCards = () => {
-        console.log("First")
         const shuffledCards = [...cardImages, ...cardImages]
             .sort(() => {
-                console.log("second")
                 return Math.random() - 0.5
             })
             .map((card) => {
                 console.log("third")
                 return { ...card, id: Math.random()}
             })
-            console.log("Fourrrr")
         setChoiceOne(null)
-        console.log("Fiff")
         setChoiceTwo(null)
-        console.log("six")
         setCards(shuffledCards)
-        console.log("seven")
         setTurns(0)
     }
 
