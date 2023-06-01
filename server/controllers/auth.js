@@ -23,22 +23,21 @@ module.exports = {
         const {username, password} = req.body
         let foundUser = await User.findOne({where: {username: username}})
         const isValidPassword = () => {
-            if(password === foundUser.dataValues.password) {
+            if(password === foundUser.password) {
                 console.log("happy path")
                 return true
             } else {
                 console.log("sad path :(")
             }
         }
-        console.log(foundUser.dataValues.username)
         console.log(username, password)
         console.log(User)
         if(foundUser && isValidPassword()) {
             console.log("LOGIN")
             res.status(200).send({
-                username: foundUser.dataValues.username, 
-                id: foundUser.dataValues.id, 
-                password: foundUser.dataValues.password
+                username: foundUser.username, 
+                id: foundUser.id, 
+                password: foundUser.password
             })
         } else {
             res.status(400).send("Incorrect username or password")
