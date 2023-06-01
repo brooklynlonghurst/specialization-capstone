@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "framework": "nodemon",
+    "framework": "create-react-app",
     "builds": [
         {
             "src": "main.js", 
