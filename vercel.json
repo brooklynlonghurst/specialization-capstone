@@ -1,6 +1,6 @@
 {
     "version": 2,
-
+    "framework": "nodemon",
     "builds": [
         {
             "src": "main.js", 
