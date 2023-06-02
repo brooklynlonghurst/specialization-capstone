@@ -6,11 +6,14 @@ const {addPost, getPosts, deletePost} = require('./controllers/postController')
 const db = require('./util/database')
 const {User, Post} = require('./util/models')
 
+const path = require('path')
+
 const app = express()
 
 const PORT = process.env.SERVER_PORT
 app.use(express.json())
 app.use(cors())
+app.use(express.static(path.join(__dirname, '../build')))
 
 User.hasMany(Post)
 Post.belongsTo(User)
