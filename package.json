@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "main": "server/main.js",
   "proxy": "http://localhost:4005",
-  "homepage": "https://brooklynlonghurst.github.io/specialization-capstone",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
