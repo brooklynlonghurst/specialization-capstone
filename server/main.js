@@ -10,7 +10,7 @@ const path = require('path')
 
 const app = express()
 
-const PORT = process.env.SERVER_PORT
+const PORT = process.env.PORT
 app.use(express.json())
 app.use(cors())
 app.use(express.static(path.join(__dirname, '../build')))
