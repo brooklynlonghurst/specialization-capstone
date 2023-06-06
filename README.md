@@ -15,7 +15,7 @@ Constellation Kids is a website for kids with interactive learning about constel
 Open a browser and paste in https://constellation-kids.herokuapp.com. There will be a login and register, register with a username and a password. After registering successfully, the homepage will showcase the types of games that are available to play. Once the 'Play Game' button has been clicked, the website will render the Game page and the games will be ready to be played.
 ![Constellation Kids](/public/img/cover-photo.png)
 
-Once the games have been played, click on the medal icon on the naviagation bar to move to the Score Board page. There is a post funcationality for sharing achievements and discoveries. Write a post, click the 'Post It' button and the comments will be saved to the account. To remove the post, click the 'Delete' button. 
+Once the games have been played, click on the medal icon on the navigation bar to move to the Score Board page. There is a post funcationality for sharing achievements and discoveries. Write a post, click the 'Post It' button and the comments will be saved to the account. To remove the post, click the 'Delete' button. 
 ![Constellation Kids](/public/img/post.png)
 
 ## Author
