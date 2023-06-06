@@ -15,7 +15,7 @@ function Menu() {
         <NavLink to="/"><IoHome size="30" color='white'/></NavLink>
         <NavLink to="/games"><IoGameController size="30" color='white'/></NavLink>
         <NavLink to="/scoreboard"><FaMedal size="30" color='white'/></NavLink>
-        <DropDownProfile title={<BsPersonCircle size="30" color='white' />} info={<a href='/auth'> <TbLogout />Logout</a>} />
+        <DropDownProfile title={<BsPersonCircle size="30" color='white' />} info={<a href='/'> <TbLogout />Logout</a>} />
         </nav>
     )
 
