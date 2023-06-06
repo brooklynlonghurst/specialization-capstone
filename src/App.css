@@ -249,7 +249,7 @@ a {
   padding: 16px 24px;
   border-radius: 24px;
   font-size: large;
-  right: 50px;
+  right: 3.5%;
   top: 4.5rem;
 }
 
@@ -266,6 +266,11 @@ a {
   border-top: 2px solid white;
 }
 
+@media only screen and (max-width: 1830px){
+  .logout-info {
+      right: 2%;
+  }
+}
 
 /* Canvas */
 .canvas-container {
