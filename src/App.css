@@ -266,11 +266,6 @@ a {
   border-top: 2px solid white;
 }
 
-@media only screen and (max-width: 1830px){
-  .logout-info {
-      left: 3.5%;
-  }
-}
 
 /* Canvas */
 .canvas-container {
